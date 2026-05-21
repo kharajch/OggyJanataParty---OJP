@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://oggy-janata-party.vercel.app';
+  const baseUrl = 'https://oggyjanataparty.vercel.app';
   
   return [
     {

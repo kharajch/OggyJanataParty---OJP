@@ -7,6 +7,9 @@ export default function robots() {
         disallow: ['/private/'],
       },
     ],
-    sitemap: 'https://oggy-janata-party.vercel.app/sitemap.xml',
+    sitemap: [
+      'https://oggyjanataparty.vercel.app/sitemap.xml',
+      'https://oggyjanataparty.vercel.app/sitemap.txt',
+    ],
   };
 }

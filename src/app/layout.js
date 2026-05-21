@@ -26,7 +26,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  metadataBase: new URL("https://oggy-janata-party.vercel.app"),
+  metadataBase: new URL("https://oggyjanataparty.vercel.app"),
   title: "Oggy Janata Party (OJP) — Voice of the Fridge Guardians",
   description: "Tired of the Cockroach Janata Party (CJP)? Join the OJP! We demand a clean kitchen, zero fridge raids, and 4-hour afternoon naps. Swat cockroaches now!",
   keywords: ["Oggy and the Cockroaches", "Oggy Janata Party", "OJP", "Satire", "Meme", "Instagram Trend", "Cockroach Janata Party", "Fridge Security"],
@@ -36,7 +36,7 @@ export const metadata = {
   openGraph: {
     title: "Oggy Janata Party (OJP) — For a Cockroach-Free Kitchen!",
     description: "Satirical political front of the cat owners, by the cats, for the fridge. Swat cockroaches and get your OJP Flyswatter License!",
-    url: "https://oggy-janata-party.vercel.app",
+    url: "https://oggyjanataparty.vercel.app",
     siteName: "Oggy Janata Party",
     images: [
       {
