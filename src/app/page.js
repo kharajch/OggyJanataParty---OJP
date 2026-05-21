@@ -557,7 +557,7 @@ export default function Home() {
           <a href="#" className="logo-group">
             <OggyIcon />
             <div className="logo-text">
-              <h1>OGGY JANATA PARTY</h1>
+              <span className="logo-title">OGGY JANATA PARTY</span>
               <p>ऑगी जनता पार्टी · Est. 2026</p>
             </div>
           </a>
@@ -589,10 +589,10 @@ export default function Home() {
                 Welcome to the official opposition front of the chronically bothered. While the Cockroach Janata Party (CJP) crawls around, we are here with heavy-duty flyswatters, vacuum cleaners, and strategic nap schedules.
               </p>
               <div className="hero-ctas">
-                <a href="#game" className="cartoon-btn">
+                <a href="#game" id="btn-hero-exterminate" className="cartoon-btn">
                   Enter Extermination Zone <span style={{ marginLeft: "4px" }}>⚡</span>
                 </a>
-                <a href="#license" className="cartoon-btn blue">
+                <a href="#license" id="btn-hero-license" className="cartoon-btn blue">
                   Get Member ID Card
                 </a>
               </div>
@@ -667,7 +667,7 @@ export default function Home() {
                   <p style={{ fontSize: "14px", color: "var(--ink-muted)", marginBottom: "20px" }}>
                     Dee Dee, Joey, and Marky have broken past the pantry door.
                   </p>
-                  <button className="cartoon-btn" onClick={startGame}>
+                  <button id="btn-start-game" className="cartoon-btn" onClick={startGame}>
                     Grab Flyswatter
                   </button>
                 </div>
@@ -678,6 +678,7 @@ export default function Home() {
                 {cockroaches.map((bug) => (
                   <div
                     key={bug.id}
+                    id={`bug-${bug.name.toLowerCase().replace(/\s+/g, "-")}-${bug.id}`}
                     className="cockroach"
                     style={{
                       left: `${bug.x}%`,
@@ -887,6 +888,7 @@ export default function Home() {
                   href="https://www.instagram.com/kharajch" 
                   target="_blank" 
                   rel="noopener noreferrer" 
+                  id="btn-founder-insta"
                   className="cartoon-btn"
                   style={{ background: "var(--nose-red)" }}
                 >
@@ -896,12 +898,14 @@ export default function Home() {
                   href="https://www.instagram.com/oggy.janata.party.india" 
                   target="_blank" 
                   rel="noopener noreferrer" 
+                  id="btn-official-insta"
                   className="cartoon-btn blue"
                 >
                   Official Insta: @oggy.janata.party.india
                 </a>
                 <a 
                   href="mailto:oggyjanatapartyindia@gmail.com" 
+                  id="btn-founder-email"
                   className="cartoon-btn green"
                 >
                   Email Us ✉️
@@ -924,7 +928,7 @@ export default function Home() {
             {/* Input Form */}
             <div className="cartoon-card">
               <h3 style={{ fontSize: "24px", marginBottom: "20px" }}>Fill Out Your Details</h3>
-              <form onSubmit={handleGenerateCard}>
+              <form id="license-form" onSubmit={handleGenerateCard}>
                 <div className="form-group">
                   <label htmlFor="card-name">Agent Name / Handle</label>
                   <input
@@ -953,8 +957,9 @@ export default function Home() {
                 </div>
 
                 <div className="form-group">
-                  <label>Current Rank Level</label>
+                  <label htmlFor="card-rank">Current Rank Level</label>
                   <input
+                    id="card-rank"
                     type="text"
                     value={`${cardRank} (Based on ${swatScore} swats)`}
                     disabled
@@ -965,7 +970,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <button type="submit" className="cartoon-btn" style={{ width: "100%", justifyContent: "center" }}>
+                <button type="submit" id="btn-generate-card" className="cartoon-btn" style={{ width: "100%", justifyContent: "center" }}>
                   Assemble My License Card 🛠️
                 </button>
               </form>
@@ -1010,7 +1015,7 @@ export default function Home() {
               </div>
 
               {cardCreated && (
-                <button className="cartoon-btn green" onClick={downloadCardImage}>
+                <button id="btn-download-license" className="cartoon-btn green" onClick={downloadCardImage}>
                   Download PNG License Image 📥
                 </button>
               )}
@@ -1089,7 +1094,7 @@ export default function Home() {
 
       {/* Interactive Sound Floating Button */}
       <div className="sound-float">
-        <button className="cartoon-btn" onClick={toggleSound} style={{ background: soundMuted ? "var(--ink)" : "var(--nose-red)" }}>
+        <button id="btn-toggle-sound" className="cartoon-btn" onClick={toggleSound} style={{ background: soundMuted ? "var(--ink)" : "var(--nose-red)" }}>
           {soundMuted ? "🔇 Enable Sounds" : "🔊 Sound Effects ON"}
         </button>
       </div>
